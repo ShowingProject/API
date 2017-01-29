@@ -1,7 +1,7 @@
 import Sequelize from 'sequelize'
 import config from './config'
 
-const sequelize = new Sequelize(config.DB_NAME, config.DB_USERNAME, config.DB_PASSWD, {
+export default new Sequelize(config.DB_NAME, config.DB_USERNAME, config.DB_PASSWD, {
   host: config.DB_HOST,
   dialect: 'mysql',
 
@@ -16,7 +16,3 @@ const sequelize = new Sequelize(config.DB_NAME, config.DB_USERNAME, config.DB_PA
     timestamps: false,
   }
 });
-
-export default callback => {
-  callback(sequelize);
-}

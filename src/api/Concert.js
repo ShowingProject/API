@@ -1,10 +1,8 @@
 import resource from 'resource-router-middleware';
-import concert from '../models/Concert';
+import { Concert } from '../models';
 
-export default ({ config, db }) => {
-  const Concert = concert(db)
-
-  return resource({
+export default ({ config }) =>
+  resource({
     /** Property name to store preloaded entity on `request`. */
     id: 'concert',
 
@@ -59,4 +57,3 @@ export default ({ config, db }) => {
       res.sendStatus(200);
     }
   });
-};
