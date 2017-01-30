@@ -5,6 +5,7 @@ import bodyParser from 'body-parser';
 import middleware from './middleware';
 import api from './api';
 import config from './config';
+import CrawlingServiceRunner from './services/crawling/CrawlingServiceRunner'
 
 const app = express();
 app.server = http.createServer(app);

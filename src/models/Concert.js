@@ -22,6 +22,11 @@ export default (sequelize) =>
       primaryKey: true,
     },
 
+    concert_hall_id: {
+      type: Sequelize.INTEGER,
+      allowNull: false,
+    },
+
     name: {
       type: Sequelize.STRING,
       allowNull: false,
@@ -32,15 +37,20 @@ export default (sequelize) =>
       allowNull: false,
     },
 
-    concert_hall_id: {
-      type: Sequelize.INTEGER,
-      allowNull: false,
+    artist: {
+      type: Sequelize.STRING,
+      allowNull: true,
     },
 
     concert_date: {
       type: Sequelize.DATE,
       allowNull: false,
       defaultValue: Sequelize.NOW,
+    },
+
+    picture_url: {
+      type: Sequelize.STRING,
+      allowNull: true,
     },
 
     created_at: {
