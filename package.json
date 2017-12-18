@@ -1,7 +1,7 @@
 {
-  "name": "express-es6-rest-api",
-  "version": "0.3.0",
-  "description": "Starter project for an ES6 RESTful Express API",
+  "name": "Showing-API",
+  "version": "0.0.1",
+  "description": "Showing Server API",
   "main": "dist",
   "scripts": {
     "dev": "nodemon -w src --exec \"babel-node src --presets es2015,stage-0\"",
@@ -27,9 +27,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/developit/express-es6-rest-api.git"
+    "url": "git+https://github.com/ShowingProject/API"
   },
-  "author": "Jason Miller <jason@developit.ca>",
+  "author": "Lee Hanur <kkak1072@gmail.com>",
   "license": "MIT",
   "dependencies": {
     "body-parser": "^1.13.3",
@@ -55,7 +55,7 @@
     "nodemon": "^1.9.2"
   },
   "bugs": {
-    "url": "https://github.com/developit/express-es6-rest-api/issues"
+    "url": "https://github.com/ShowingProject/API/issues"
   },
-  "homepage": "https://github.com/developit/express-es6-rest-api#readme"
+  "homepage": "https://github.com/ShowingProject/API#readme"
 }
