@@ -8,7 +8,7 @@ import CrawlingService from '../CrawlingService'
 import { lastIndex } from './db.json'
 
 class ClubEvans extends CrawlingService {
-  static CrawlingCount = 7
+  static CrawlingCount = 10
   static ConcertHallId = 1
   static webURL = 'http://www.clubevans.com'
   static baseURL = `${ClubEvans.webURL}/bbs/board.php?bo_table=TODAYS_LIVE&wr_id=`
@@ -16,7 +16,6 @@ class ClubEvans extends CrawlingService {
   static run() {
     for (let i = 0; i < this.CrawlingCount; i++) {
       const crawlingURL = `${this.baseURL}${lastIndex + i}`
-
       rp(crawlingURL)
         .then(htmlString => cheerio.load(htmlString))
         .then($ => {
@@ -45,6 +44,7 @@ class ClubEvans extends CrawlingService {
             content,
           })
         })
+        .catch(err => {})
     }
   }
 
