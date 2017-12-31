@@ -7,9 +7,6 @@ import ConcertHall from './ConcertHall'
 export default ({ config }) => {
   const api = Router();
 
-  // mount the facets resource
-  // api.use('/facets', facets({ config, db }));
-
   api.use('/concert', Concert({ config }));
   api.use('/concertHall', ConcertHall({ config }));
 
