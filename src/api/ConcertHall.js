@@ -24,35 +24,4 @@ export default ({ config }) => resource({
         res.json(concertHalls);
       })
   },
-
-  /** POST / - Create a new entity */
-  create({ body }, res) {
-    ConcertHall.create({ ...body })
-      .then(concertHall => {
-        res.json(concertHall)
-      })
-  },
-
-  /** GET /:id - Return a given entity */
-  read({ concertHall }, res) {
-    res.json(concertHall);
-  },
-
-  /** PUT /:id - Update a given entity */
-  update({ concertHall, body }, res) {
-    concertHall.update({ ...body })
-      .then(concertHall => {
-        res.sendStatus(200);
-      })
-      .catch(err => {
-        res.sendStatus(500)
-      })
-  },
-
-  /** DELETE /:id - Delete a given entity */
-  delete({ concertHall }, res) {
-    concertHall.destroy()
-
-    res.sendStatus(200);
-  }
 });
