@@ -1,5 +1,7 @@
 import clubEvansCrawlingService from './clubEvans'
+import jabiDabangCrawlingService from './jaebiDabang'
 
 export default {
-  clubEvansCrawlingService,
+  jabiDabangCrawlingService,
+  // clubEvansCrawlingService,
 }

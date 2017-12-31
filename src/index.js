@@ -6,9 +6,13 @@ import middleware from './middleware';
 import api from './api';
 import config from './config';
 import CrawlingServiceRunner from './services/crawling/CrawlingServiceRunner'
+import 'moment-timezone';
 
 const app = express();
 app.server = http.createServer(app);
+
+// run Crawler
+// CrawlingServiceRunner.run()
 
 // 3rd party middleware
 app.use(cors({
@@ -27,6 +31,6 @@ app.use('/api', api({ config }));
 
 app.server.listen(process.env.PORT || config.port);
 
-console.log(`Started on port ${app.server.address().port}`);
+console.log(`Started on port ${config.port}`);
 
 export default app;

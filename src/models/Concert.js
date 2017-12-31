@@ -29,12 +29,12 @@ export default (sequelize) =>
 
     name: {
       type: Sequelize.STRING,
-      allowNull: false,
+      allowNull: true,
     },
 
     content: {
       type: Sequelize.TEXT,
-      allowNull: false,
+      allowNull: true,
     },
 
     artist: {
