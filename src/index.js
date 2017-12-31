@@ -5,7 +5,7 @@ import bodyParser from 'body-parser';
 import middleware from './middleware';
 import api from './api';
 import config from './config';
-import CrawlingServiceRunner from './services/crawling/CrawlingServiceRunner'
+// import CrawlingServiceRunner from './services/crawling/CrawlingServiceRunner'
 import 'moment-timezone';
 
 const app = express();

@@ -44,8 +44,12 @@ export default (sequelize) =>
 
     concert_date: {
       type: Sequelize.DATE,
-      allowNull: false,
-      defaultValue: Sequelize.NOW,
+      allowNull: true,
+    },
+
+    end_date: {
+      type: Sequelize.DATE,
+      allowNull: true,
     },
 
     picture_url: {

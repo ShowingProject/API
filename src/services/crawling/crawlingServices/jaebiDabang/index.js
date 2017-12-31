@@ -26,6 +26,7 @@ class JaebiDabang extends CrawlingService {
           this.save({
             concertHallId: JaebiDabang.ConcertHallId,
             concert_date: data.start,
+            end_date: data.end,
             picture_url: null,
             artist: data.summary,
             name: data.summary,
